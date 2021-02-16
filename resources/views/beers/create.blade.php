@@ -11,15 +11,17 @@
     <h1>Dettaglio Birra</h1>
     
 
-    <form action="" method="POST">
+    <form action="{{ route('beers.store') }}" method="POST">
+        
         @csrf
         @method('POST')
+
         <div class="form-group">
             <label for="name">Nome</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="nome">
         </div>
         <div class="form-group">
-            <label for="price"></label>
+            <label for="price">Prezzo</label>
             <input type="text" class="form-control" name="price" id="price" placeholder="prezzo">
         </div>
         <div class="form-group">

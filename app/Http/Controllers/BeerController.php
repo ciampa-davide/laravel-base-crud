@@ -37,7 +37,15 @@ class BeerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $beer = new Beer();
+        $beer->name = $data['name'];
+        $beer->country = $data['country'];
+        $beer->manufacturer = $data['manufacturer'];
+        $beer->price = $data['price'];
+        $beer->isbn = $data['isbn'];
+        $beer->save();
+        
     }
 
     /**
